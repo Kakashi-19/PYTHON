@@ -1,0 +1,3 @@
+slice works the same as range
+exmple = range(1,9) means from 1 to 9
+similarly a slice starts from initial value and end on final - 1th value 

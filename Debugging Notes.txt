@@ -1,0 +1,29 @@
+You can raise your own exceptions: raise Exception(‘This is the error message.')
+You can also use assertions: assert condition, ‘Error message'
+Assertions are for detecting programmer errors that are not meant to be recovered from. User errors should raise exceptions.
+
+The logging module lets you display logging messages.
+Log messages create a "breadcrumb trail" of what your program is doing.
+After calling logging.basicConfig() to set up logging, call logging.debug(‘This is the message') to create a log message.
+When done, you can disable the log messages with logging.disable(logging.CRITICAL)
+Don't use print() for log messages: It's hard to remove the mall when you're done debugging.
+The five log levels are: DEBUG, INFO, WARNING, ERROR, and CRITICAL.
+You can also log to a file instead of the screen with the filename keyword argument in the logging.basicConfig() function.
+
+example use of logging
+import logging
+logging.basicConfig(level=logging.DEBUG, formal='&(asctime)s - %(levelname)s - %(message)s')\
+use logging.debug('') to add your log message
+
+to save the log to a filename instead of showing in the program add filrname att. to the basicConfig() method
+logging.basicConfig(filename='fiename.txt', level=logging.DEBUG, formal='&(asctime)s - %(levelname)s - %(message)s')
+
+The debugger is a tool that lets you execute Python code one instruction at a time and shows you the values in variables.
+Open the Debug Control window with Debug > Debugger before running the program.
+The Over button will step over the current line of code and pause on the next one.
+The Step button will step into a function call.
+The Out button will step out of the current function you are in.
+The Go button will continue the program until the next breakpoint or until the end of the program if there are no breakpoints.
+The Quit button will immediately terminate the program.
+Breakpoints are lines where the debugger will pause and let you choose when to continue running the program.
+Breakpoints can be set by right-clicking the file editor window and selecting "Set Breakpoint"

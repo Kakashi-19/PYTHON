@@ -1,0 +1,34 @@
+>>> spam = ['vaibhav', 'amnesias', 'halo' ]
+>>> cheese = spam
+>>> cheese[0] = 'arnav'
+>>> spam
+['arnav', 'amnesias', 'halo']
+
+
+>>> cheese
+['arnav', 'amnesias', 'halo']
+>>> spam = 42
+>>> cheese = spam
+>>> spam = 100
+>>> spam
+100
+>>> cheese
+42
+>>> variables dont copy the list
+>>> variables copy reference values
+>>> so change in either variable will change the list for both variables referenced to that particular list, 
+while in case of other values the variable copy the value so change in on variable doesnt affect the othern variable
+
+
+>> import copy
+>>> spam =['vaibhav', 'hallo', 'hi']
+>>> cheese = copy.deepcopy(spam)
+
+>>> cheese[1] = 'howdy'
+>>> spam
+['vaibhav', 'hallo', 'hi']
+>>> cheese
+['vaibhav', 'howdy', 'hi']
+>>>  USING COPY.DEEPCOPY() CREATES A COMPLETE NEW COPY OF THAT LIST AND NOT JUST PROVIDES A REFERENCE TO THAT LIST
+THATS WHY CHANGE THE LIST CHEESE DOESNT CHANGE THE LIST SPAM
+

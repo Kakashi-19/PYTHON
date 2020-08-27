@@ -1,0 +1,65 @@
+upper() and lower() return an uppercase or lowercase string.
+isupper(), islower(), isalpha(), isalnum(), isdecimal(), isspace(), istitle() returns True or False if the string is that uppercase, lowercase, alphabetical letters, and so on.
+startswith() and endswith() also return bools.
+‘,'.join([‘cat', ‘dog']) returns a string that combines the strings in the given list.
+‘Hello world'.split() returns a list of strings split from the string it's called on.
+rjust() ,ljust(), center() returns a string padded with spaces.
+strip(), rstrip(), lstrip() returns a string with whitespace stripped off the sides.
+replace() will replace all occurrences of the first string argument with the second string argument.
+Pyperclip has copy() and paste() functions for getting and putting strings on the clipboard.
+
+
+
+EXAMPLE
+
+
+
+
+>>> spam = 'vaibhav'
+>>> spam.upper()
+'VAIBHAV'
+
+>>> spam = 'yEs'
+>>> if spam.lower() == 'yes':
+	print(spam)
+
+	
+yEs
+>>> spam = spam.lower()
+>>> spam
+'yes'
+>>> spam.islower()
+True
+
+>>> spam = 'YES'
+>>> spam.isupper()
+True
+>>> spam = ''
+>>> spam.isupper()
+False
+>>> spam.islower()
+False
+>>> >>> spam.center(20, '*')
+'********************'
+>>> spam
+''
+>>> spam = 'hello'
+>>> spam.ljust(10)
+'hello     '
+>>> spam.rjust(10, '#')
+'#####hello'
+>>> spam.split('#')
+['hello']
+>>> spam.split('pa')
+['hello']
+>>> ''.join(['vaibav', 'is', 'a good', 'boy'])
+'vaibavisa goodboy'
+>>> ' '.join(['vaibav', 'is', 'a good', 'boy'])
+'vaibav is a good boy'
+>>> 'vaibav is a good boy'.strip()
+'vaibav is a good boy'
+>>> 'vaibav is a good boy'.split()
+['vaibav', 'is', 'a', 'good', 'boy']
+
+>>> 'vaibav is a good boy'.split('is')
+['vaibav ', ' a good boy']
